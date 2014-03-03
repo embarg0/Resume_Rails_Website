@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%# All coded here as long as have yield command, will be everywhere on site (like a navig bar etc).. Layout /#%>
+  <title>MyFirstApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<%# pages in app/assets/stylesheets are imported to everywhere /#%>
+<%# can give unique ids for CSS classes, reference them with '#' in front/#%>
+<div class="header" id="header">
+	<div class="container" id ="header-container"><%# content container that will be 960px/#%>
+
+		<%= image_tag "CubaPlantS.jpg" , style:"height: 500px; width: 1000px;"%>
+	</div>
+</div>
+
+<div class="navigation">
+	<div class="container"><%# content container that will be 960px/#%>
+<%# stuff after root_path is a sort of hash #%>
+<%= link_to "home",  root_path, class: "nav-link" %>
+<%= link_to "News", news_posts_path, class: "nav-link" %>
+<%= link_to "Contact", contact_path,class: "nav-link" %>
+ <%= link_to "About", about_path,class: "nav-link" %>
+ <% unless user_signed_in? %>
+ <%= link_to "Sign In", new_user_session_path,class: "nav-link" %>
+ <% else %>
+ <%= link_to "Sign Out", destroy_user_session_path, 
+ 			method: :delete, class: "nav-link" %>
+ 	<%= "Signed in as #{current_user.email}" %>
+ <% end %>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container"><%# content container that will be 960px/#%>
+		<%= yield %>
+		<%#<%= image_tag "CubaPlantS.jpg" %>
+	</div>
+
+</div>
+
+<div class="footer">
+	<div class="container"><%# content container that will be 960px/#%>
+		Contact: emilienne.pugin@gmail.com
+	</div>
+</div>
+
+
+</body>
+</html>

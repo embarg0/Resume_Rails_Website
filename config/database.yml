@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  database: first_app
+  username: postgres
+  password: postgres
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: first_app
+  username: postgres
+  password: postgres
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: first_app
+  username: postgres
+  password: postgres
+  host: localhost

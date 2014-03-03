@@ -1,0 +1,12 @@
+<h1>All News</h1>
+
+<p>
+	<%# additional text subheader /#%>
+</p>
+
+<%= link_to "Add New News Post", new_news_post_path %>
+
+<div class="news-posts" style="background: url(CubaPlant.jpg)">
+	<%= render @news_posts %>
+	<div class ="image_div" style="background: url(CubaPlant.jpg); width:5000; height:750" />
+</div>
