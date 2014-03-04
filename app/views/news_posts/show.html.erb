@@ -15,7 +15,11 @@
 <p>
 	Created: <%= @news_post.created_at %>
 </p>
-<%= link_to "Edit News Post with ID: #{@news_post.id}", 
-            edit_news_post_path %>
 
-<%= link_to "Back to all news", news_posts_path %>
+<% if admin? %>
+	<%= link_to "Edit News Post with ID: #{@news_post.id}", 
+    	        edit_news_post_path %>
+
+	<%= link_to "Back to all news", news_posts_path %>
+
+<% end %>

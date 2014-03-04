@@ -1,6 +1,6 @@
 class NewsPostsController < ApplicationController
   
-  before_action :authorize_for_news_posts, except: [:index, :show]
+  before_action :deny_access_for_non_admins, except: [:index, :show]
 
   def index
   	@news_posts = NewsPost.all
@@ -49,12 +49,6 @@ class NewsPostsController < ApplicationController
   end
 
   private
-
-  def authorize_for_news_posts
-    if current_user.nil?
-      redirect_to root_path
-    end
-  end
 
     #method to have strong parameter for the create method mass assignment situation
     #sanitizes the input
