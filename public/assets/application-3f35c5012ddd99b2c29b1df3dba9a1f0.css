@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* Layout styling */
+body {
+  margin: 0;
+  background: #000000; }
+
+.container {
+  width: 960px;
+  margin: 0 auto 0 auto; }
+
+/* Header Styling */
+.header {
+  background: #962C7E; }
+
+/* Navigation Styling */
+.navigation {
+  background: black;
+  color: white; }
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  margin-right: 15px;
+  color: white; }
+  .nav-link:hover {
+    background: #962C7E;
+    color: black; }
+  .nav-link:visited {
+    color: white; }
+
+/* Content Styling */
+.content {
+  background: #ffffff; }
+  .content h1 {
+    margintop: 0; }
+
+/* Footer Styling */
+.footer {
+  background: #000000;
+  color: white; }
+.news-posts .news-post {
+  margin: 20px 0; }
+  .news-posts .news-post .title {
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    font-size: 2em; }
+  .news-posts .news-post .body {
+    background: #962C7E;
+    padding: 5px; }
+  .news-posts .news-post .actions {
+    background: #C975C7;
+    padding: 5px; }
+    .news-posts .news-post .actions a {
+      color: black;
+      text-decoration: none; }

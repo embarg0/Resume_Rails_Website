@@ -6,10 +6,11 @@ MyFirstApp::Application.routes.draw do
 root "pages#home" # unauthenticated individual rerouted to the root
 
   get "news_posts/index"
-  get "/contact" => "pages#contact"
-  get "/about" => "pages#about"
-  get "/interesting_facts" => "pages#interesting_facts"
-  get "/about_me" => "pages#about"
+  get "/contact"            => "pages#contact"
+  post "/contact"           => "pages#contact"
+  get "/about"              => "pages#about"
+  get "/interesting_facts"  => "pages#interesting_facts"
+  get "/about_me"           => "pages#about"
 # all of the above, contact, about auto gen elements with those names
   ## news_posts resource LONG WAY:            !!
   #get "/news_posts" => "news_posts#index"
