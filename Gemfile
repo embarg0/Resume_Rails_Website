@@ -39,7 +39,7 @@ end
 
 gem 'devise' #Allows log-ins for admins etc. 
 
-
+gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
